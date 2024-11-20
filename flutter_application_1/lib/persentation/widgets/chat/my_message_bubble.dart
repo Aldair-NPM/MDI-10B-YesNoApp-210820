@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:YesNoApp_210820/domain/entities/message.dart';
 
 class MyMessageBubble extends StatelessWidget {
-  const MyMessageBubble({super.key});
+  final Message message;
+
+  const MyMessageBubble({
+    super.key, 
+    required this.message
+  });
 
   @override
   Widget build(BuildContext context) {
-    final colors = Theme.of(context).colorScheme;
+    //final colors = Theme.of(context).colorScheme;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.end,
@@ -13,15 +19,15 @@ class MyMessageBubble extends StatelessWidget {
         Container(
           decoration: BoxDecoration(
               color: Colors.orange, borderRadius: BorderRadius.circular(20)),
-          child: const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             child: Text(
-              'Hey Bro',
-              style: TextStyle(color: Colors.white),
+              message.text,
+              style: const TextStyle(color: Colors.white),
             ),
           ),
         ),
-        const SizedBox(height: 10)
+        const SizedBox(height: 5)
       ],
     );
   }
