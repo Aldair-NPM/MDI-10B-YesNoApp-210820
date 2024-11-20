@@ -1,6 +1,6 @@
 {
-    "name": "YesNoApp-210820",
-    "short_name": "YesNoApp-210820",
+    "name": "YesNoApp_210820",
+    "short_name": "YesNoApp_210820",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
